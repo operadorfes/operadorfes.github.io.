@@ -1,11 +1,179 @@
 index.html
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Mi Página</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zona Gamer</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #101426;
+            color: white;
+        }
+
+        header {
+            background-color: #171e38;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            color: #55d6ff;
+            font-size: 36px;
+        }
+
+        nav {
+            background-color: #252e50;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 12px;
+        }
+
+        main {
+            max-width: 950px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #55d6ff;
+        }
+
+        .tarjetas {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tarjeta {
+            background-color: #202944;
+            border-radius: 12px;
+            padding: 18px;
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .tarjeta h3 {
+            color: #b99aff;
+        }
+
+        button {
+            background-color: #55d6ff;
+            color: #101426;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #171e38;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>¡Hola! Esta es mi primera página 🎉</h1>
-    <p>¡Bienvenidos!</p>
+
+    <header>
+        <h1>🎮 ZONA GAMER</h1>
+        <p>Descubre el emocionante mundo de los videojuegos</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#juegos">Videojuegos</a>
+        <a href="#beneficios">Beneficios</a>
+    </nav>
+
+    <main>
+        <section id="inicio">
+            <h2>Bienvenidos a Zona Gamer</h2>
+            <p>
+                Los videojuegos son una forma de entretenimiento
+                que permite explorar mundos, resolver desafíos
+                y compartir experiencias con otras personas.
+            </p>
+        </section>
+
+        <section id="juegos">
+            <h2>Videojuegos populares</h2>
+
+            <div class="tarjetas">
+                <div class="tarjeta">
+                    <h3>Fortnite</h3>
+                    <p>
+                        Un videojuego de acción donde los jugadores
+                        pueden construir, explorar y competir.
+                    </p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Roblox</h3>
+                    <p>
+                        Una plataforma donde puedes descubrir
+                        y crear experiencias de juego.
+                    </p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Minecraft</h3>
+                    <p>
+                        Un juego que permite construir, explorar
+                        y utilizar la creatividad.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficios">
+            <h2>Beneficios de jugar responsablemente</h2>
+            <ul>
+                <li>Desarrollar la creatividad.</li>
+                <li>Practicar la resolución de problemas.</li>
+                <li>Colaborar con otras personas.</li>
+                <li>Organizar el tiempo para estudiar y descansar.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>¡Explora Zona Gamer!</h2>
+            <p>Presiona el botón para descubrir un mensaje.</p>
+
+            <button onclick="mostrarMensaje()">
+                Haz clic aquí
+            </button>
+
+            <p id="mensaje"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto de informática</p>
+        <p>Alumno: Escribe aquí tu nombre</p>
+        <p>Grupo: Escribe aquí tu grupo</p>
+    </footer>
+
+    <script>
+        function mostrarMensaje() {
+            document.getElementById("mensaje").textContent =
+                "¡Que comience la aventura gamer!";
+        }
+    </script>
+
 </body>
 </html>
